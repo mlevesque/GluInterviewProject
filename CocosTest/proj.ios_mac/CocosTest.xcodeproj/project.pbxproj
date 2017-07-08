@@ -15,6 +15,7 @@
 		332A19371F10556000583A73 /* JSONLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332A19351F10556000583A73 /* JSONLoader.cpp */; };
 		332A19391F105C0E00583A73 /* GameObjectsConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 332A19381F105C0E00583A73 /* GameObjectsConfig.json */; };
 		332A193B1F10618300583A73 /* TableLayoutConfigs in Resources */ = {isa = PBXBuildFile; fileRef = 332A193A1F10618300583A73 /* TableLayoutConfigs */; };
+		332A193F1F10675B00583A73 /* GridLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332A193D1F10675B00583A73 /* GridLayout.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10517EB98FF00D1A890 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 503AE10317EB98FF00D1A890 /* main.cpp */; };
 		503AE11217EB99EE00D1A890 /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 503AE11117EB99EE00D1A890 /* libcurl.dylib */; };
@@ -188,6 +189,8 @@
 		332A19361F10556000583A73 /* JSONLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONLoader.h; path = ../Classes/JSONLoader.h; sourceTree = "<group>"; };
 		332A19381F105C0E00583A73 /* GameObjectsConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GameObjectsConfig.json; sourceTree = "<group>"; };
 		332A193A1F10618300583A73 /* TableLayoutConfigs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TableLayoutConfigs; sourceTree = "<group>"; };
+		332A193D1F10675B00583A73 /* GridLayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GridLayout.cpp; sourceTree = "<group>"; };
+		332A193E1F10675B00583A73 /* GridLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridLayout.h; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE10317EB98FF00D1A890 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = mac/main.cpp; sourceTree = "<group>"; };
@@ -248,6 +251,8 @@
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
 				332A19351F10556000583A73 /* JSONLoader.cpp */,
 				332A19361F10556000583A73 /* JSONLoader.h */,
+				332A193D1F10675B00583A73 /* GridLayout.cpp */,
+				332A193E1F10675B00583A73 /* GridLayout.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -539,6 +544,7 @@
 				332A19371F10556000583A73 /* JSONLoader.cpp in Sources */,
 				6D4AD17118DD238800DA87D4 /* EngTestScene.cpp in Sources */,
 				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
+				332A193F1F10675B00583A73 /* GridLayout.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
