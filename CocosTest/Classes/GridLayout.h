@@ -24,6 +24,9 @@ struct GridPoint {
     // coordinate values
     int x;
     int y;
+    
+    // operators
+    bool operator ==(const GridPoint &b) const;
 };
 
 /**
@@ -47,7 +50,7 @@ private:
     int* m_gridValues;
     
     // calculates the 1d array index from the tile coordinates
-    int CalculateArrayIndex (const GridPoint& p);
+    int CalculateArrayIndex (const GridPoint& p) const;
     
 public:
     // constructor
@@ -57,23 +60,26 @@ public:
     ~GridLayout (void);
     
     // getters for dimensions
-    const unsigned GetGridWidth (void);
-    const unsigned GetGridHeight (void);
-    const float GetTileWidth (void);
-    const float GetTileHeight (void);
+    const unsigned GetGridWidth (void) const;
+    const unsigned GetGridHeight (void) const;
+    const float GetTileWidth (void) const;
+    const float GetTileHeight (void) const;
     
     // returns the pathing value at a certain tile space
-    int GetTileValue (const GridPoint& p);
+    int GetTileValue (const GridPoint& p) const;
+    
+    // returns if the given tile location is marked as impassable
+    bool IsTileImpassable (const GridPoint& p) const;
     
     // sets the tile value at the given tile coordinates
     bool SetTileValue (const GridPoint& p, const int value);
     
     // conversions between world space and tile space
-    GridPoint ConvertWorldSpaceToTileSpace (const cocos2d::Point& p);
-    cocos2d::Point ConvertTileSpaceToWorldSpace (const GridPoint& p, const bool getCenter = false);
+    GridPoint ConvertWorldSpaceToTileSpace (const cocos2d::Point& p) const;
+    cocos2d::Point ConvertTileSpaceToWorldSpace (const GridPoint& p, const bool getCenter = false) const;
     
     // takes a tile space point and returns if it lies inside the grid layout or not
-    bool IsInsideGrid (const GridPoint& p);
+    bool IsInsideGrid (const GridPoint& p) const;
 };
 
 #endif /* GridLayout_h */

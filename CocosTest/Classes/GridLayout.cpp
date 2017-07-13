@@ -14,11 +14,18 @@
 GridPoint::GridPoint (int x, int y)
 : x(x), y(y) {}
 
+/**
+ * Comparison operator for Grid Points.
+ */
+bool GridPoint::operator ==(const GridPoint &b) const {
+    return x == b.x && y == b.y;
+}
+
 
 /**
  * Returns the index value for the tile value array from the given tile coordinates.
  */
-int GridLayout::CalculateArrayIndex (const GridPoint& p) {
+int GridLayout::CalculateArrayIndex (const GridPoint& p) const {
     return p.y * m_width + p.x;
 }
 
@@ -31,8 +38,8 @@ GridLayout::GridLayout (const unsigned width, const unsigned height, const cocos
     unsigned size =m_width * m_height;
     m_gridValues = new int[size];
     
-    // default array values to zero
-    memset(m_gridValues, 0, sizeof(int) * size);
+    // default array values to 1
+    memset(m_gridValues, int(1), sizeof(int) * size);
 }
 
 /**
@@ -46,28 +53,28 @@ GridLayout::~GridLayout (void) {
 /**
  * Returns the width of the grid layout.
  */
-const unsigned GridLayout::GetGridWidth (void) {
+const unsigned GridLayout::GetGridWidth (void) const {
     return m_width;
 }
 
 /**
  * Returns the height of the grid layout.
  */
-const unsigned GridLayout::GetGridHeight (void) {
+const unsigned GridLayout::GetGridHeight (void) const {
     return m_height;
 }
 
 /**
  * Returns the width of a grid tile.
  */
-const float GridLayout::GetTileWidth (void) {
+const float GridLayout::GetTileWidth (void) const {
     return m_tileWidth;
 }
 
 /**
  * Returns the height of a grid tile.
  */
-const float GridLayout::GetTileHeight (void) {
+const float GridLayout::GetTileHeight (void) const {
     return m_tileHeight;
 }
 
@@ -75,7 +82,7 @@ const float GridLayout::GetTileHeight (void) {
  * Returns the tile value of a tile at the given coordinates. If the coordinates lie outside of the grid
  * layout, then this will return the impassable value.
  */
-int GridLayout::GetTileValue (const GridPoint& p) {
+int GridLayout::GetTileValue (const GridPoint& p) const {
     // check if out of bounds
     if (!IsInsideGrid(p)) {
         return IMPASSABLE;
@@ -83,6 +90,14 @@ int GridLayout::GetTileValue (const GridPoint& p) {
     
     // return the tile value
     return m_gridValues[CalculateArrayIndex(p)];
+}
+
+/**
+ * Returns true if the given tile location is marked as impassable. This would also include a tile location
+ * that falls outside the grid layout. If the tile is traversable, then this returns false.
+ */
+bool GridLayout::IsTileImpassable (const GridPoint& p) const {
+    return GetTileValue(p) == IMPASSABLE;
 }
 
 /**
@@ -103,14 +118,14 @@ bool GridLayout::SetTileValue (const GridPoint& p, const int value) {
 /**
  * Returns a tile space coordinate conversion from the given world space coordinates.
  */
-GridPoint GridLayout::ConvertWorldSpaceToTileSpace (const cocos2d::Point& p) {
+GridPoint GridLayout::ConvertWorldSpaceToTileSpace (const cocos2d::Point& p) const {
     return GridPoint (int((p.x - m_offset.x) / m_tileWidth), int((p.y - m_offset.y) / m_tileHeight));
 }
 
 /**
  * Returns a world space coordinate conversion from the given tile space coordinates.
  */
-cocos2d::Point GridLayout::ConvertTileSpaceToWorldSpace (const GridPoint& p, const bool getCenter) {
+cocos2d::Point GridLayout::ConvertTileSpaceToWorldSpace (const GridPoint& p, const bool getCenter) const {
     cocos2d::Point result (float(p.x) * m_tileWidth + m_offset.x, float(p.y) * m_tileHeight + m_offset.y);
     if (getCenter) {
         result.x += m_tileWidth * 0.5f;
@@ -123,6 +138,6 @@ cocos2d::Point GridLayout::ConvertTileSpaceToWorldSpace (const GridPoint& p, con
  * Returns true if the given tile space coordinates lies within the grid layout.
  * Returns false otherwise.
  */
-bool GridLayout::IsInsideGrid (const GridPoint& p) {
+bool GridLayout::IsInsideGrid (const GridPoint& p) const {
     return p.x >= 0 && p.y >= 0 && p.x < m_width && p.y < m_height;
 }
