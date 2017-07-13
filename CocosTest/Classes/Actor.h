@@ -36,6 +36,8 @@ public:
     bool IsCurrentlyRunningActions (void);
     void ClearActions (void);
     
+    cocos2d::Sprite* GetSprite (void);
+    
     void SetSpeed (const float speed);
     float GetSpeed (void);
     

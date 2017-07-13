@@ -60,6 +60,10 @@ void Actor::ClearActions (void) {
     m_sprite->stopAllActions();
 }
 
+cocos2d::Sprite* Actor::GetSprite (void) {
+    return m_sprite;
+}
+
 void Actor::SetSpeed (const float speed) {
     m_speed = speed;
 }
