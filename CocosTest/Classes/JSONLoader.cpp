@@ -34,6 +34,6 @@ void JSONLoader::Reload (void) {
 /**
  * Returns a reference to the document object. This object contains the parsed JSON data.
  */
-rapidjson::Document& JSONLoader::GetDocument (void) {
-    return m_document;
+rapidjson::Document* JSONLoader::GetDocument (void) {
+    return &m_document;
 }

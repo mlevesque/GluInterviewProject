@@ -29,7 +29,7 @@ public:
     void Reload (void);
     
     // returns the Rapid JSON parsed object.
-    rapidjson::Document& GetDocument (void);
+    rapidjson::Document* GetDocument (void);
 };
 
 #endif /* JSONLoader_h */
