@@ -12,10 +12,15 @@
 		1AC6FB21180E996B004C840B /* libcocos2dx Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2dx Mac.a */; };
 		1AC6FB22180E996B004C840B /* libcocos2dx-extensions Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAFB180E9839004C840B /* libcocos2dx-extensions Mac.a */; };
 		1AC6FB23180E996B004C840B /* libCocosDenshion Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB01180E9839004C840B /* libCocosDenshion Mac.a */; };
+		3313D1891F14A40600055BE3 /* LayoutScrambler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3313D1871F14A40600055BE3 /* LayoutScrambler.cpp */; };
+		3313D1971F14A7CC00055BE3 /* TableData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3313D1951F14A7CC00055BE3 /* TableData.cpp */; };
+		3313D1991F15A08800055BE3 /* tableConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 3313D1981F15A08800055BE3 /* tableConfig.json */; };
+		3313D19C1F17266A00055BE3 /* Actor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3313D19A1F17266A00055BE3 /* Actor.cpp */; };
+		3313D19F1F17364600055BE3 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3313D19D1F17364600055BE3 /* Utils.cpp */; };
 		332A19371F10556000583A73 /* JSONLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332A19351F10556000583A73 /* JSONLoader.cpp */; };
 		332A19391F105C0E00583A73 /* GameObjectsConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 332A19381F105C0E00583A73 /* GameObjectsConfig.json */; };
-		332A193B1F10618300583A73 /* TableLayoutConfigs in Resources */ = {isa = PBXBuildFile; fileRef = 332A193A1F10618300583A73 /* TableLayoutConfigs */; };
 		332A193F1F10675B00583A73 /* GridLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332A193D1F10675B00583A73 /* GridLayout.cpp */; };
+		332A19421F1148FC00583A73 /* PathFind.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332A19401F1148FC00583A73 /* PathFind.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10517EB98FF00D1A890 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 503AE10317EB98FF00D1A890 /* main.cpp */; };
 		503AE11217EB99EE00D1A890 /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 503AE11117EB99EE00D1A890 /* libcurl.dylib */; };
@@ -185,12 +190,22 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3313D1871F14A40600055BE3 /* LayoutScrambler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LayoutScrambler.cpp; sourceTree = "<group>"; };
+		3313D1881F14A40600055BE3 /* LayoutScrambler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutScrambler.h; sourceTree = "<group>"; };
+		3313D1951F14A7CC00055BE3 /* TableData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TableData.cpp; sourceTree = "<group>"; };
+		3313D1961F14A7CC00055BE3 /* TableData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableData.h; sourceTree = "<group>"; };
+		3313D1981F15A08800055BE3 /* tableConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tableConfig.json; sourceTree = "<group>"; };
+		3313D19A1F17266A00055BE3 /* Actor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Actor.cpp; sourceTree = "<group>"; };
+		3313D19B1F17266A00055BE3 /* Actor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Actor.h; sourceTree = "<group>"; };
+		3313D19D1F17364600055BE3 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
+		3313D19E1F17364600055BE3 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		332A19351F10556000583A73 /* JSONLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = JSONLoader.cpp; path = ../Classes/JSONLoader.cpp; sourceTree = "<group>"; };
 		332A19361F10556000583A73 /* JSONLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONLoader.h; path = ../Classes/JSONLoader.h; sourceTree = "<group>"; };
 		332A19381F105C0E00583A73 /* GameObjectsConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GameObjectsConfig.json; sourceTree = "<group>"; };
-		332A193A1F10618300583A73 /* TableLayoutConfigs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TableLayoutConfigs; sourceTree = "<group>"; };
 		332A193D1F10675B00583A73 /* GridLayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GridLayout.cpp; sourceTree = "<group>"; };
 		332A193E1F10675B00583A73 /* GridLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridLayout.h; sourceTree = "<group>"; };
+		332A19401F1148FC00583A73 /* PathFind.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PathFind.cpp; sourceTree = "<group>"; };
+		332A19411F1148FC00583A73 /* PathFind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathFind.h; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE10317EB98FF00D1A890 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = mac/main.cpp; sourceTree = "<group>"; };
@@ -253,6 +268,16 @@
 				332A19361F10556000583A73 /* JSONLoader.h */,
 				332A193D1F10675B00583A73 /* GridLayout.cpp */,
 				332A193E1F10675B00583A73 /* GridLayout.h */,
+				332A19401F1148FC00583A73 /* PathFind.cpp */,
+				332A19411F1148FC00583A73 /* PathFind.h */,
+				3313D1871F14A40600055BE3 /* LayoutScrambler.cpp */,
+				3313D1881F14A40600055BE3 /* LayoutScrambler.h */,
+				3313D1951F14A7CC00055BE3 /* TableData.cpp */,
+				3313D1961F14A7CC00055BE3 /* TableData.h */,
+				3313D19A1F17266A00055BE3 /* Actor.cpp */,
+				3313D19B1F17266A00055BE3 /* Actor.h */,
+				3313D19D1F17364600055BE3 /* Utils.cpp */,
+				3313D19E1F17364600055BE3 /* Utils.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -352,7 +377,7 @@
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
 				332A19381F105C0E00583A73 /* GameObjectsConfig.json */,
-				332A193A1F10618300583A73 /* TableLayoutConfigs */,
+				3313D1981F15A08800055BE3 /* tableConfig.json */,
 			);
 			name = Resources;
 			path = ../Resources;
@@ -524,10 +549,10 @@
 			files = (
 				332A19391F105C0E00583A73 /* GameObjectsConfig.json in Resources */,
 				6D4AD17818DD23DA00DA87D4 /* bg.png in Resources */,
+				3313D1991F15A08800055BE3 /* tableConfig.json in Resources */,
 				6D4AD17B18DD23DA00DA87D4 /* node.png in Resources */,
 				5087E75317EB910900C73F5D /* CloseNormal.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
-				332A193B1F10618300583A73 /* TableLayoutConfigs in Resources */,
 				6D4AD17918DD23DA00DA87D4 /* flo.png in Resources */,
 				5087E75417EB910900C73F5D /* CloseSelected.png in Resources */,
 				6D4AD17C18DD23DA00DA87D4 /* table.png in Resources */,
@@ -541,11 +566,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3313D19C1F17266A00055BE3 /* Actor.cpp in Sources */,
+				3313D1971F14A7CC00055BE3 /* TableData.cpp in Sources */,
 				332A19371F10556000583A73 /* JSONLoader.cpp in Sources */,
+				3313D19F1F17364600055BE3 /* Utils.cpp in Sources */,
 				6D4AD17118DD238800DA87D4 /* EngTestScene.cpp in Sources */,
 				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
+				332A19421F1148FC00583A73 /* PathFind.cpp in Sources */,
 				332A193F1F10675B00583A73 /* GridLayout.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
+				3313D1891F14A40600055BE3 /* LayoutScrambler.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
