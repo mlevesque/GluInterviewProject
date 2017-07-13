@@ -55,8 +55,6 @@ void TableData::ClearArrangementData (void) {
  */
 TableData::TableData (const char* jsonFileName)
 : m_filename(jsonFileName), m_numberOfTablesToPlace(0) {
-    // load data
-    Reload();
 }
 
 /**
