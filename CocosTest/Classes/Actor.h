@@ -14,6 +14,9 @@
 
 typedef std::list<cocos2d::Point> ActorPath;
 
+/**
+ * The Actor class is a wrapper around a Sprite with support for animating it along queued paths.
+ */
 class Actor {
 private:
     // the sprite that represents the actor
@@ -29,18 +32,19 @@ private:
     void OnActionCompleted (void);
     
 public:
+    // constructor/destructor
     Actor (cocos2d::Sprite* sprite);
     ~Actor (void);
     
+    // queued action methods
     void QueuePathAction (ActorPath& path);
     bool IsCurrentlyRunningActions (void);
     void ClearActions (void);
     
+    // getters/setters
     cocos2d::Sprite* GetSprite (void);
-    
     void SetSpeed (const float speed);
     float GetSpeed (void);
-    
     cocos2d::Point GetWhereActorWillBeAfterActions (void);
 };
 

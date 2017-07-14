@@ -33,7 +33,7 @@ bool PathFind::Node::operator() (const Node* a, const Node* b) const {
  * Allocates a node for pathing using the given key and grid point position.
  */
 PathFind::Node* PathFind::CreateNode (const unsigned key, const GridPoint& p) {
-    PathFind::Node* node = new PathFind::Node (p);
+    PathFind::Node* node = new PathFind::Node(p);
     
     // set key for node
     node->key = key;
@@ -51,7 +51,7 @@ PathFind::Node* PathFind::CreateNode (const unsigned key, const GridPoint& p) {
  * Calculates an estimated distance from the given point to the goal point, using Manhattan Distance.
  */
 float PathFind::CalculateHeuristic (const GridPoint& point) {
-    return abs (point.x - m_goalPosition.x) + abs (point.y - m_goalPosition.y);
+    return abs(point.x - m_goalPosition.x) + abs(point.y - m_goalPosition.y);
 }
 
 /**
@@ -70,10 +70,10 @@ unsigned PathFind::GenerateKey (const unsigned x, const unsigned y) {
  */
 void PathFind::AddNeighborsToOpenList (Node* node) {
     // try to add all neighbors
-    AddNodeToOpenListIfValid (GridPoint (node->point.x - 1, node->point.y), node); // left
-    AddNodeToOpenListIfValid (GridPoint (node->point.x + 1, node->point.y), node); // right
-    AddNodeToOpenListIfValid (GridPoint (node->point.x, node->point.y - 1), node); // down
-    AddNodeToOpenListIfValid (GridPoint (node->point.x, node->point.y + 1), node); // up
+    AddNodeToOpenListIfValid(GridPoint(node->point.x - 1, node->point.y), node); // left
+    AddNodeToOpenListIfValid(GridPoint(node->point.x + 1, node->point.y), node); // right
+    AddNodeToOpenListIfValid(GridPoint(node->point.x, node->point.y - 1), node); // down
+    AddNodeToOpenListIfValid(GridPoint(node->point.x, node->point.y + 1), node); // up
 }
 
 /**
@@ -82,25 +82,25 @@ void PathFind::AddNeighborsToOpenList (Node* node) {
  */
 void PathFind::AddNodeToOpenListIfValid (const GridPoint& point, Node* prevNode) {
     // disregard if impassable
-    if (m_layout->IsTileImpassable (point)) {
+    if (m_layout->IsTileImpassable(point)) {
         return;
     }
     
     // disregard if in closed list
-    unsigned key = GenerateKey (point.x, point.y);
-    if (m_closedList.count (key) > 0) {
+    unsigned key = GenerateKey(point.x, point.y);
+    if (m_closedList.count(key) > 0) {
         return;
     }
     
     // get node if it already exists, or create a new one
     Node* node;
-    if (m_createdNodes.count (key) > 0) {
+    if (m_createdNodes.count(key) > 0) {
         node = m_createdNodes[key];
     }
     else {
         // create and add to open list
-        node = CreateNode (key, point);
-        m_openList.insert (node);
+        node = CreateNode(key, point);
+        m_openList.insert(node);
     }
     
     // calculate g(n)

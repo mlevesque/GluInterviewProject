@@ -119,14 +119,14 @@ bool GridLayout::SetTileValue (const GridPoint& p, const int value) {
  * Returns a tile space coordinate conversion from the given world space coordinates.
  */
 GridPoint GridLayout::ConvertWorldSpaceToTileSpace (const cocos2d::Point& p) const {
-    return GridPoint (int((p.x - m_offset.x) / m_tileWidth), int((p.y - m_offset.y) / m_tileHeight));
+    return GridPoint(int((p.x - m_offset.x) / m_tileWidth), int((p.y - m_offset.y) / m_tileHeight));
 }
 
 /**
  * Returns a world space coordinate conversion from the given tile space coordinates.
  */
 cocos2d::Point GridLayout::ConvertTileSpaceToWorldSpace (const GridPoint& p, const bool getCenter) const {
-    cocos2d::Point result (float(p.x) * m_tileWidth + m_offset.x, float(p.y) * m_tileHeight + m_offset.y);
+    cocos2d::Point result(float(p.x) * m_tileWidth + m_offset.x, float(p.y) * m_tileHeight + m_offset.y);
     if (getCenter) {
         result.x += m_tileWidth * 0.5f;
         result.y += m_tileHeight * 0.5f;

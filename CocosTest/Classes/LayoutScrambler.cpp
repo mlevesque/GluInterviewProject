@@ -27,7 +27,7 @@ Sector::Sector (const Sector& s)
  * Assignment operator.
  */
 Sector Sector::operator=(const Sector& s) {
-    return Sector (s);
+    return Sector(s);
 }
 
 
