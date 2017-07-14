@@ -3,6 +3,14 @@
 
 #include "cocos2d.h"
 #include <base/CCGeometry.h>
+#include "JSONLoader.h"
+#include "GridLayout.h"
+#include "PathFind.h"
+#include "TableData.h"
+#include "LayoutScrambler.h"
+#include "Actor.h"
+#include "Utils.h"
+#include "ConfigData.h"
 
 class EngTestScene : public cocos2d::Layer
 {
@@ -17,12 +25,32 @@ public:
     virtual bool init();  
     
     // a selector callback
-    void menuCloseCallback(Object* pSender);
+    
     
     // implement the "static create()" method manually
     CREATE_FUNC(EngTestScene);
     
 private:
+    
+    TableData m_tableData;
+    ConfigData m_configData;
+    GridLayout* m_gridLayout;
+    Actor* m_playerActor;
+    std::list<cocos2d::Sprite*> m_gridSprites;
+    
+    void ReloadData (void);
+    void ClearScene (void);
+    void ReloadScene (void);
+    
+    void SetTileTableCollisions (TablesToPlaceList& tables);
+    void BuildTileSprites (void);
+    void CreatePlayerSprite (void);
+    
+    bool OnTouchBegan (cocos2d::Touch* touch, cocos2d::Event* event);
+    void OnTouchEnded (cocos2d::Touch* touch, cocos2d::Event* event);
+    void OnMenuClose (Object* pSender);
+    void OnMenuScramble (Object* pSender);
+    
     
     typedef cocos2d::Point NodePosition;
     typedef cocos2d::Point GridCoordinate;

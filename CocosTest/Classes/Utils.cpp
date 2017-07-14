@@ -15,7 +15,7 @@
 ActorPath ConvertTileSpacePathToWorldSpace (const std::list<GridPoint>& path, const GridLayout& layout) {
     ActorPath result;
     for (std::list<GridPoint>::const_iterator i = path.begin(); i != path.end(); ++i) {
-        result.push_back(layout.ConvertTileSpaceToWorldSpace(*i));
+        result.push_back(layout.ConvertTileSpaceToWorldSpace(*i, true));
     }
     return result;
 }

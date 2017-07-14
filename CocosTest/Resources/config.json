@@ -1,0 +1,9 @@
+{
+    "gridWidth" : 10,
+    "gridHeight" : 5,
+    "tileWidth" : 90,
+    "tileHeight" : 90,
+    "gridOffsetX" : 0,
+    "gridOffsetY" : 0,
+    "playerSpeed" : 0.25
+}

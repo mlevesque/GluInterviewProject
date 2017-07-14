@@ -17,8 +17,11 @@
 		3313D1991F15A08800055BE3 /* tableConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 3313D1981F15A08800055BE3 /* tableConfig.json */; };
 		3313D19C1F17266A00055BE3 /* Actor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3313D19A1F17266A00055BE3 /* Actor.cpp */; };
 		3313D19F1F17364600055BE3 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3313D19D1F17364600055BE3 /* Utils.cpp */; };
+		3313D1AF1F186F3500055BE3 /* ConfigData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3313D1AD1F186F3500055BE3 /* ConfigData.cpp */; };
+		3313D1B21F18897700055BE3 /* RefreshNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3313D1B01F18897700055BE3 /* RefreshNormal.png */; };
+		3313D1B31F18897700055BE3 /* RefreshSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 3313D1B11F18897700055BE3 /* RefreshSelected.png */; };
 		332A19371F10556000583A73 /* JSONLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332A19351F10556000583A73 /* JSONLoader.cpp */; };
-		332A19391F105C0E00583A73 /* GameObjectsConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 332A19381F105C0E00583A73 /* GameObjectsConfig.json */; };
+		332A19391F105C0E00583A73 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 332A19381F105C0E00583A73 /* config.json */; };
 		332A193F1F10675B00583A73 /* GridLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332A193D1F10675B00583A73 /* GridLayout.cpp */; };
 		332A19421F1148FC00583A73 /* PathFind.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332A19401F1148FC00583A73 /* PathFind.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
@@ -199,9 +202,13 @@
 		3313D19B1F17266A00055BE3 /* Actor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Actor.h; sourceTree = "<group>"; };
 		3313D19D1F17364600055BE3 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
 		3313D19E1F17364600055BE3 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		3313D1AD1F186F3500055BE3 /* ConfigData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConfigData.cpp; sourceTree = "<group>"; };
+		3313D1AE1F186F3500055BE3 /* ConfigData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigData.h; sourceTree = "<group>"; };
+		3313D1B01F18897700055BE3 /* RefreshNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RefreshNormal.png; sourceTree = "<group>"; };
+		3313D1B11F18897700055BE3 /* RefreshSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RefreshSelected.png; sourceTree = "<group>"; };
 		332A19351F10556000583A73 /* JSONLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = JSONLoader.cpp; path = ../Classes/JSONLoader.cpp; sourceTree = "<group>"; };
 		332A19361F10556000583A73 /* JSONLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONLoader.h; path = ../Classes/JSONLoader.h; sourceTree = "<group>"; };
-		332A19381F105C0E00583A73 /* GameObjectsConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GameObjectsConfig.json; sourceTree = "<group>"; };
+		332A19381F105C0E00583A73 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
 		332A193D1F10675B00583A73 /* GridLayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GridLayout.cpp; sourceTree = "<group>"; };
 		332A193E1F10675B00583A73 /* GridLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridLayout.h; sourceTree = "<group>"; };
 		332A19401F1148FC00583A73 /* PathFind.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PathFind.cpp; sourceTree = "<group>"; };
@@ -278,6 +285,8 @@
 				3313D19B1F17266A00055BE3 /* Actor.h */,
 				3313D19D1F17364600055BE3 /* Utils.cpp */,
 				3313D19E1F17364600055BE3 /* Utils.h */,
+				3313D1AD1F186F3500055BE3 /* ConfigData.cpp */,
+				3313D1AE1F186F3500055BE3 /* ConfigData.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -370,13 +379,15 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3313D1B01F18897700055BE3 /* RefreshNormal.png */,
+				3313D1B11F18897700055BE3 /* RefreshSelected.png */,
 				6D4AD17218DD23DA00DA87D4 /* bg.png */,
 				6D4AD17318DD23DA00DA87D4 /* flo.png */,
 				6D4AD17618DD23DA00DA87D4 /* node.png */,
 				6D4AD17718DD23DA00DA87D4 /* table.png */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
-				332A19381F105C0E00583A73 /* GameObjectsConfig.json */,
+				332A19381F105C0E00583A73 /* config.json */,
 				3313D1981F15A08800055BE3 /* tableConfig.json */,
 			);
 			name = Resources;
@@ -547,14 +558,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				332A19391F105C0E00583A73 /* GameObjectsConfig.json in Resources */,
+				332A19391F105C0E00583A73 /* config.json in Resources */,
 				6D4AD17818DD23DA00DA87D4 /* bg.png in Resources */,
 				3313D1991F15A08800055BE3 /* tableConfig.json in Resources */,
 				6D4AD17B18DD23DA00DA87D4 /* node.png in Resources */,
 				5087E75317EB910900C73F5D /* CloseNormal.png in Resources */,
+				3313D1B31F18897700055BE3 /* RefreshSelected.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				6D4AD17918DD23DA00DA87D4 /* flo.png in Resources */,
 				5087E75417EB910900C73F5D /* CloseSelected.png in Resources */,
+				3313D1B21F18897700055BE3 /* RefreshNormal.png in Resources */,
 				6D4AD17C18DD23DA00DA87D4 /* table.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -566,6 +579,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3313D1AF1F186F3500055BE3 /* ConfigData.cpp in Sources */,
 				3313D19C1F17266A00055BE3 /* Actor.cpp in Sources */,
 				3313D1971F14A7CC00055BE3 /* TableData.cpp in Sources */,
 				332A19371F10556000583A73 /* JSONLoader.cpp in Sources */,
